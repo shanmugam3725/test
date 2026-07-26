@@ -11,3 +11,6 @@ jobs:
 
       - name: Print actor
         run: echo "Triggered by: ${{ github.actor }}"
+
+      - name: Print actor
+        run: echo "Triggered by: ${{ github.actor }}"
