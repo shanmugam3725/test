@@ -1,8 +1,13 @@
-name: Context
+name: Show GitHub Context
+
 on: push
+
 jobs:
-  prod-check:
-    if: ${{ github.ref == 'refs/heads/main' }}
+  example:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploying to production server on branch $GITHUB_REF"
+      - name: Print branch
+        run: echo "Branch: ${{ github.ref }}"
+
+      - name: Print actor
+        run: echo "Triggered by: ${{ github.actor }}"
