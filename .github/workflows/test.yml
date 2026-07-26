@@ -20,10 +20,19 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          npm install
 
       - name: Run tests
-        run: npm test
-      - name: work space
-        run: echo $GITHUB_WORKSPACE
-        
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          npm test
+
+      - name: Work space
+        run: echo "$GITHUB_WORKSPACE"
+
+      - name: Run lint
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          npm run lint
