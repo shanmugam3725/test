@@ -1,4 +1,4 @@
-name: CI
+name: Context
 on: push
 jobs:
   prod-check:
